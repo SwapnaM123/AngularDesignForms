@@ -1,0 +1,34 @@
+<div class="container">
+    <h1 style="color:rgb(22, 20, 20);text-align: center;"><i>Activate Account Form</i></h1>
+    <div class="alert alert-danger" *ngIf="errorMsg;else next">{{errorMsg}}</div>
+    <ng-template #next>
+        <form [formGroup]="ngForm" (ngSubmit)="enroll()">
+            <!-- {{ngForm.value|json}}
+        <hr> -->
+            <div class="form-group">
+                <label>Mail Id</label>
+                <input type="text" class="form-control" formControlName="MailId">
+                <small class="text-danger" *ngIf="MailId.invalid && MailId.touched ">EmailId is required</small>
+            </div>
+            <div class="form-group">
+                <label>Token</label>
+                <input type="text" class="form-control" formControlName="Token">
+                <small class="text-danger" *ngIf="Token.invalid && Token.touched ">Token is required</small>
+            </div>
+
+            <div class="form-group">
+                <!-- <label>ConfirmPassord</label>
+                <input type="password" [class.is-invalid]='confirmPassword.invalid && confirmPassword.touched'
+                    class="form-control" formControlName="confirmPassword">
+                <small class="text-danger" *ngIf="confirmPassword.invalid && confirmPassword.touched ">confirmPassword
+                    is required</small>  -->
+                <div>
+                    <input type="submit" [disabled]="ngForm.invalid" class="btn btn-success" value="submit">
+
+                </div>
+
+            </div>
+        </form>
+    </ng-template>
+    <br><br>
+</div>

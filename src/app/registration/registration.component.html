@@ -1,0 +1,77 @@
+<!-- <p>registration works!</p> -->
+<div class="container">
+    <h1 style="color:rgb(22, 20, 20);text-align: center;"><i>Registration</i></h1>
+
+
+    <form [formGroup]="ngForm" (ngSubmit)="enroll()">
+        <!-- <div class="form-group">
+            <label>Id</label>
+            <input type="text" class="form-control" formControlName="Id">
+            <small class="text-danger" *ngIf="Id.invalid && Id.touched ">Id is required</small>
+        </div> -->
+        <div class="form-group">
+            <label>FirstName</label>
+            <input type="text" class="form-control" formControlName="FirstName">
+            <small class="text-danger" *ngIf="FirstName.invalid && FirstName.touched ">FirstName is required</small>
+        </div>
+        <div class="form-group">
+            <label>MiddleName</label>
+            <input type="text" class="form-control" formControlName="MiddleName">
+            <small class="text-danger" *ngIf="MiddleName.invalid && MiddleName.touched ">MiddleName is required</small>
+        </div>
+        <div class="form-group">
+            <label>LastName</label>
+            <input type="text" class="form-control" formControlName="LastName">
+            <small class="text-danger" *ngIf="LastName.invalid && LastName.touched ">LastName is required</small>
+        </div>
+        <div class="form-group">
+            <label>MailId</label>
+            <input type="text" class="form-control" formControlName="MailId">
+            <small class="text-danger" *ngIf="MailId.invalid && MailId.touched "></small>
+              <!-- <small class="text-danger" *ngIf="MailId.errors.email">MailId is required</small>   -->
+        </div>
+        <div class="form-group">
+            <label>MobileNo</label>
+            <input type="text" class="form-control" formControlName="MobileNo">
+            <small class="text-danger" *ngIf="MobileNo.invalid && MobileNo.touched ">MobileNo is required</small>
+        </div>
+        <div class="form-group">
+            <label>UserName</label>
+            <input type="text" class="form-control" formControlName="UserName">
+            <small class="text-danger" *ngIf="UserName.invalid && UserName.touched ">UserName is required</small>
+        </div>
+         <div class="form-group">
+            <label>Password</label>
+            <input type="text" class="form-control" formControlName="Password">
+            <small class="text-danger" *ngIf="Password.invalid && Password.touched ">Password is required</small>
+            <!-- <small class="text-danger" *ngIf="Password.errors.length ">Password must have atleast 6 characters</small> -->
+        </div>
+
+        
+        <div class="form-group">
+            <label>ConfirmPassword</label>
+            <input type="text" class="form-control" formControlName="ConfirmPassword" >
+            <small class="text-danger" *ngIf="ConfirmPassword.invalid && ConfirmPassword.touched ">ConfirmPassword is required</small>
+            <!-- <small class="text-danger" *ngIf="ngForm.get(['Password']).value != ngForm.get(['ConfirmPassword']).value ">ConfirmPassword must match Password</small> -->
+        </div>
+        <!-- <div class="form-group">
+            <label>Token</label>
+            <input type="text" class="form-control" formControlName="Token">
+            <small class="text-danger" *ngIf="Token.invalid && Token.touched ">Token is required</small>
+        </div>
+        <div class="form-group">
+            <label>Date</label>
+            <input type="text" class="form-control" formControlName="Date">
+            <small class="text-danger" *ngIf="Date.invalid && Date.touched ">Date is required</small>
+        </div> -->
+        <div class="form-group">
+            <div>
+                <input type="submit" [disabled]="ngForm.invalid" class="btn btn-success" value="Register">
+            </div>
+        </div>
+        
+    </form>
+
+    <br><br>
+</div>
+
